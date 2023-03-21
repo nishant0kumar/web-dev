@@ -5,21 +5,35 @@
     <meta name="Nishant" content="HTML learn">
     <title>PortFolio</title>
     <style>
-        body{background-color: grey;}
+        body{background-color: rgb(0, 0, 0);}
+        font {
+          color: white;
+        }
     </style>
+    <style media="screen" href="main.css">
+    table, tr,th,td, caption{
+      border: 3px solid #dddddd;
+      font-family: "courier New", courier, monospace;
+      border-collapse: collapse;
+      padding: 2rem;
+    }
+    </style>
+    <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
+<body style="color: pink;" >
     <header>
           <h1>National Language</h1>
           <h1>Interntional language</h1>
       <hr>
       <hr>
       <p>nisahnt kaumr</p>
+      <h3 id="contact">contact the page</h3>
       <hr>
       <nav aria-label="primary-navigation">
         <h2 id="primary navigation">primary navigation</h2>
         <p>nishatnkumar</p>
+
         <ul>
           <li>
             <a href="html">learning html5</a>
@@ -32,6 +46,147 @@
     </header>
     <main>
       <br>
+      <section>
+        <table>
+          <caption>my daily work</caption>
+          <tr>
+            <th>time</th>
+            <th>work</th>
+          </tr>
+              <td>
+              <time datetime="2:00">2pm</time>-
+              <time datetime="4:00">4pm</time>
+            </td>
+
+            <td>Write code</td>
+
+          <tr>
+            <td>
+              <time datetime="8:00">8pm</time>-
+              <time datetime="10:00">10pm</time>
+              </td>
+              <td>
+                Write 2nd code
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="contact">
+        <br>
+        <form class="" action="https://httpbin.org/get" method="get">
+          <fieldset>
+            <legend>Personal info</legend>
+              <p>
+                <label for="firstname">firstname:</label>
+                <input type="text" name="firstname" value="Search" id="firstname" placeholder="anjaana" autofocus >
+              </p>
+              <p>
+                <label for="lastname">lastname:</label>
+                <input type="text" name="lastname" value="Search" id="lastname" placeholder="anjaani"  >
+              </p>
+              <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" value="Search" id="password" placeholder="ladki" >
+              </p>
+              <p>
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" value="phone" id="phone" placeholder="8929150037" pattern="[0-9]{10}" required  >
+              </p>
+              <p>
+                <label for="decade">Favourite decade:</label>
+                <input type="number" name="decade" value="2000" id="decade" min="1980" max="2024" step="20" placeholder="8929150037" pattern="[0-9]{3}-[0-9]{7}" required  >
+              </p>
+              <p>
+                <label for="coffee" id="coffee">Garam chai</label>
+                <select name="coffee" id="coffee" >
+                  <optgroup label="coffees">
+                    <option value="regular coffee">regular coffee</option>
+                  </optgroup>
+                  <optgroup label="hot tea">
+                    <option value="chai" selected>chai</option>
+                    <option value="tea">tea</option>
+                    <option value="kadak chai">kadka chai</option>
+                    <option value="other">other</option>
+                  </optgroup>
+                </select>
+              </p>
+              <p>
+                <label for="Food" id="Food">Menu</label>
+                <select name="Food" id="Food" multiple size="5">
+                  <optgroup label="Breakfast">
+                    <option value="regular Food">regular Food</option>
+                    <option value="luxury">malai paneer</option>
+                  </optgroup>
+                  <optgroup label="Dinner">
+                    <option value="Dal chawal" selected>Dal chawal</option>
+                    <option value="roti">roti</option>
+                    <option value="paneer">paneer</option>
+                  </optgroup>
+                    <option value="other">other</option>
+                </select>
+              </p>
+              <p>
+            </fieldset>
+            <fieldset>
+              <legend>Cold drinks</legend>
+                <label for="cold drinks">cold drinks</label>
+                <input type="text" name="cold drinks" value="" id="cold drinks" list="cold drinks-list">
+                <datalist id="cold drinks-list">
+                  <option value="cola">
+                  <option value="pepsi">
+                  <option value="sprite">
+                  <option value="appy">
+                  <option value="other">
+
+                </datalist>
+              </p>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>Radio input</legend>
+            <p>
+              <input type="radio" value="tacos" name="rad" id="tacos" >
+              <label for="tacos">tacos</label>
+            </p>
+            <p>
+              <input type="radio" value="Pizza" name="rad" id="Pizza" >
+              <label for="Pizza">Pizza</label>
+            </p><p>
+              <input type="radio"value="Burgur" name="rad" id="Burgur" >
+              <label for="Burgur">Burgur</label>
+            </p>
+          </fieldset>
+          <br>
+          <fieldset>
+            <legend>do you have pets?</legend>
+            <p>
+              <input type="checkbox" name="pets" value="dog" id="dog">
+              <label for="dog">dog</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" value="cat" id="cat">
+              <label for="cat">cat</label>
+            </p>
+            <p>
+              <input type="checkbox" name="pets" value="parrot" id="parrot">
+              <label for="parrot">parrot</label>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>eren yaeger</legend>
+            <label for="message">Your message</label>
+            <br>
+            <textarea name="message" id="message" rows="8" cols="20" placeholder="Type your message here"></textarea>
+
+
+          </fieldset>
+          <br>
+          <button type="submit" name="button">submity</button>
+          <button type="reset" name="button">reset</button>
+          <button type="submit" formaction="https://httpbiin.org/post" formmethod="post">post</button>
+        </form>
+      </section>
 
       <hr>
         <section>
@@ -55,12 +210,22 @@
             <ul>
                 <li>
                     contact me at
-                    <a href=nishantku51121@gmail.com>my email address</address></a>
+                    <a href="nishantku51121@gmail.com">my email address</address></a>
                 </li>
                 <li>
                     or contact me at <a href=8929150037>My phone number</a>
                 </li>
             </ul>
+            <aside class="">
+              <details close>
+                <summary>Guess the number of line i worte code in a day</summary>
+                <p>I wrote too much in a day for me</p>
+              </details>
+              <details close>
+                <summary>Guess the number of code o wrote</summary>
+                <p>o p q r s t u v w x y z </p>
+              </details>
+            </aside>
         </section>
     </main>
     <footer>
