@@ -61,7 +61,7 @@ div:hover{
     transition-delay: 0.2s;
 }
 
-.animate {
+.animate:hover {
     animation-name: slide;
     animation-duration: 5s;
     animation-timing-function: ease-in-out;
@@ -83,6 +83,6 @@ div:hover{
     }
     100%{
         transform: translatex(0) rotate(360deg);
-        background-color: rebeccapurple;
+        background-color: crimson;
     }
 }
