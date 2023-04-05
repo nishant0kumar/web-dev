@@ -4,22 +4,22 @@
     box-sizing: border-box;
 }
 
-img{
+img {
     display: block;
     max-width: 100%;
     height: auto;
 }
 
 /* utitlity class */
-.nowrap{
+.nowrap {
     white-space: nowrap;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font: 1.5rem ;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
@@ -31,14 +31,14 @@ body{
     flex-direction: column;
 }
 
-header, footer{
+header, footer {
     position: sticky;
     background-color: #1E2938;
     color: whitesmoke;
     text-align: center;
 }
 
-header{
+header {
     top: 0;
 }
 
@@ -50,11 +50,11 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a, nav a:visited{
+nav a, nav a:visited {
     color: #000;
 }
 
-nav a:hover, nav a:focus{
+nav a:hover, nav a:focus {
     color: hsla(0, 0%, 20%, 0.6);
 }
 
@@ -75,7 +75,7 @@ footer {
     bottom: 0;
 }
 
-.card{
+.card {
     scroll-margin: 8rem;
     width: min(100%, 350px);
     background-color: #cbd5e1;
@@ -85,12 +85,12 @@ footer {
     align-items: center;
 }
 
-.card figure{
+.card figure {
     display: flex;
     flex-flow: column nowrap;
 }
 
-.card img{
+.card img {
     align-items: center;
     width: 300px;
     height: 300px;
@@ -98,14 +98,14 @@ footer {
     border-radius: 50%;
 }
 
-.card:last-child img{
+.card:last-child img {
     width: 300px;
     height: 300px;
     border-radius: 50%;
     align-content: center;
 }
 
-.card figcaption{
+.card figcaption {
     font-weight: bolder;
     font-size: 2rem;
     margin: 1rem;
@@ -122,7 +122,7 @@ footer {
     .card {
         width: min(100%, 480px);
     }
-    .card:first-child{
+    .card:first-child {
         order: +1;
     }
     .card img {
@@ -141,7 +141,7 @@ footer {
     .card figure {
         flex-flow: column-reverse;
     }
-    .card figcaption{
+    .card figcaption {
         margin: 0.1rem;            
     }
     .card p {
@@ -150,10 +150,10 @@ footer {
 }
 /* large */
 @media screen and (min-width: 992px) {
-    .card{
+    .card {
         width: min(100%,400px);
     }
-    .card:nth-child(2){
+    .card:nth-child(2) {
         order: -1;
     }
 }
@@ -168,7 +168,7 @@ footer {
         justify-content: space-evenly;
         align-items: stretch;
     }
-    nav{
+    nav {
         display: none;
     }
 
@@ -176,7 +176,7 @@ footer {
         width: min(calc(33% - 0.25rem), 200px)
     }
 
-    .card figcaption, .card p{
+    .card figcaption, .card p {
         font-size: 1.5rem;
 
     }

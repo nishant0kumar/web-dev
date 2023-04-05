@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1px;
+    scroll-behavior: smooth;
+}
+
+html {
+    background-color: red;
+}
+
+body {
+    justify-content: center;
+}
+
+table, td, tr, th {
+    border: 1px solid ;
+    border-collapse: collapse;
+    border-color: hsl(240, 94%, 27%);
+    text-align: center;
+}
+
+a:hover{
+    border: 0.25px solid black;
+    width: auto;
+    height: auto;
+    background-color: burlywood;
+
+}
+
+img {
+    height: 500px;
+    width: 745px;
+}
+
+/* header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header__h1 {
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+    padding: 0.25em;
+}
+
+nav {
+    background-color: chocolate;
+    border-bottom: 1px solid black ;
+    font-weight: bold ;
+    box-shadow: 0 6px 5px -5px black;
+}
+
+ul{
+    padding: 0.25em;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+}
+
+.input {
+    display: flex;
+    justify-content: end;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero__h2 {
+    background-color: darkcyan;
+    color:white;
+    padding: 0.25em 0.25em;
+    letter-spacing: 0.1rem;
+    text-shadow: 2px 2px 5px white;
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: showwelcome 0.5s ease-in-out 1s forwards;
+}
+
+@keyframes showwelcome {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(0deg, -5deg) scaleY(1.2);
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(0);
+    }
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+}
+
+.footer__p {
+    border: 1px solid black;
+    background-color: black;
+}
+
+span {
+    background-color: black;
+    color: white;
+}
+
