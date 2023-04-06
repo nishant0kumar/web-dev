@@ -8,11 +8,12 @@
 }
 
 html {
-    background-color: rgb(72, 72, 72);
+    background-color:royalblue;
 }
 
 body {
-    justify-content: center;
+    display: flex;
+    justify-content: start;
 }
 
 table, td, tr, th {
@@ -23,11 +24,17 @@ table, td, tr, th {
 }
 
 a:hover{
-    border: 0.25px solid black;
     width: auto;
     height: auto;
-    background-color: burlywood;
+    background-color:aquamarine;
+}
 
+hr {
+    border-color: aqua;
+}
+
+.break {
+    background-color: lightblue;
 }
 
 img {
@@ -66,6 +73,7 @@ ul{
 }
 
 .input {
+    background-color: red;
     display: flex;
     justify-content: end;
 }
@@ -83,7 +91,7 @@ ul{
     position: absolute;
     top: -100px;
     left: 20px;
-    animation: showwelcome 0.5s ease-in-out 1s forwards;
+    animation: showwelcome 1s ease-in-out 0.5s;
 }
 
 @keyframes showwelcome {
