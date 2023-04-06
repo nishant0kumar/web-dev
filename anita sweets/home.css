@@ -4,16 +4,10 @@
     background-color: white;
     box-sizing: border-box;
     padding: 1px;
-    scroll-behavior: smooth;
 }
 
 html {
-    background-color:royalblue;
-}
-
-body {
-    display: flex;
-    justify-content: start;
+    background-color:black;
 }
 
 table, td, tr, th {
@@ -27,6 +21,7 @@ a:hover{
     width: auto;
     height: auto;
     background-color:aquamarine;
+    animation: ankor 5s ;
 }
 
 hr {
@@ -91,24 +86,36 @@ ul{
     position: absolute;
     top: -100px;
     left: 20px;
-    animation: showwelcome 1s ease-in-out 0.5s;
+    animation: showwelcome 1s ease-in-out 0.5s forwards alternate-reverse;
+    animation-iteration-count: 2;
+    animation-play-state: running;
 }
 
 @keyframes showwelcome {
     0% {
         top: -20px;
-        transform: skew(0deg, -5deg) scaleY(0);
+        transform:scaleY(0);
     }
 
-    80% {
+    40% {
         top: 30px;
-        transform: skew(0deg, -5deg) scaleY(1.2);
+        transform: scaleY(1.2);
     }
 
     100% {
         top: 20px;
-        transform: skew(-10deg, -5deg) scaleY(0);
+        transform: scaleY(0);
     }
+}
+
+@keyframes ankor {
+    from {
+        transform: translateX(20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+    
 }
 
 footer {
@@ -126,3 +133,72 @@ span {
     color: white;
 }
 
+
+
+
+
+.animate {
+    animation-name: grow;
+    animation-duration: 1s;
+    animation-iteration-count: calc(1/0);
+    animation-timing-function: ease;
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scaleX(1.1);
+    }
+    50% {
+      transform: scaleX(1.8);
+      background: darkturquoise;
+    }
+  }
+  
+  /* Decorative styles */
+  .grower {
+    width: 400px;
+    height: 8px;
+    background: rebeccapurple;
+    position: relative;
+  }
+
+
+
+  .pulser {
+    width: 900px;
+    height: 20px;
+    background: pink;
+    position: relative;
+  }
+  
+  .pulser::after {
+    animation: pulse 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0.4;
+    }
+  }
+  
+  .pulser::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: red;
+    z-index: +1;
+  }
+  
+  /* Decorative styles */
+  body {
+    
+    place-items: start;
+  }
+  
