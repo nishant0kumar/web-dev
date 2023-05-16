@@ -1,6 +1,171 @@
-table, tr,th,td, caption{
-  border: 2px solid #dddddd;
-  font-family: "courier New", courier, monospace;
-  border-collapse: collapse;
-  padding: 0.5rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  color: black;
+  scroll-behavior: smooth;
+}
+
+
+body{
+  width: auto;
+  height: auto;
+  background-color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* .header_div{
+  display:grid;
+  width: 50vh;
+  height: 50vh;
+  background-color: yellowgreen;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_div_div{
+  display: grid;
+  width: 25vh;
+  height: 5vh;
+  background-color: rgb(255, 68, 0);
+  justify-content: start;
+  align-items: start;
+}
+
+.second{
+  display: flex;
+  width: 50vh;
+  height: 50vh;
+  background-color: yellow; 
+  align-content: flex-end;
+}
+
+.header_div_div:hover {
+  background-color: black;
+} */
+
+.logo_text {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  height: 100px;
+  font-size: 11rem;
+  overflow: hidden;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a:hover {
+  color: rgb(98, 92, 92);
+}
+
+:visited{
+  color: hsl(0, 9%, 66%);
+}
+
+.writing {
+  background-color: black;
+  font-family:'Times New Roman', Times, serif;
+  padding: 1rem;
+  top: 30%;
+  row-gap: 10rem;
+  position: relative;
+  border-radius: 1rem;
+}
+
+h4{
+  font-family:monospace;
+  color: whitesmoke;
+}
+
+.break{
+  background-color: white;
+  position: relative;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.bottom_div {
+  display: grid;
+  place-content: center;
+  background-color: black;
+  width: 30rem;
+  height: 45rem;
+  border-radius: 2rem 2rem 2rem 2rem;
+}
+
+.bottom_div_div {
+  display: grid;
+  place-content: center;
+  background-color: white;
+  width: 25rem;
+  height: 40rem;
+  border-radius: 2rem;
+}
+
+.bottom_text {
+  color: red;
+  position: relative;
+  overflow: auto;
+}
+
+footer{
+  position: sticky;
+  bottom: 0;
+}
+
+.sticky {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1.15rem;
+}
+
+
+.linkedin a i:hover{
+  color: blue;
+}
+.instagram a i:hover{
+  color: rgb(231, 63, 91);
+}
+.youtube a i:hover{
+  color: red;
+}
+.github a i:hover{
+  color: rgb(56, 55, 55);
+}
+
+
+@media screen and (max-width: 768px) {
+  header section main footer {
+      display: none;
+  }
+
+  section main {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .logo_top {
+      display: none;
+  }
+  .content{
+    padding-left:0.5rem;
+  }
 }
