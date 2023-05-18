@@ -2,7 +2,7 @@
     margin: 0.25rem;
     padding: 0;
     box-sizing: border-box;
-    background-color: #999;
+    background-color: black;
 }
 
 html {
@@ -41,15 +41,15 @@ div {
 }
 
 div:first-child {
-    background-color: burlywood;
+    background-color: yellow;
 }
 
 div:nth-child(2) {
-    background-color: darkkhaki;
+    background-color: orange;
 }
 
 div:last-child {
-    background-color: goldenrod;
+    background-color: gold;
 }
 
 div:hover{
