@@ -50,7 +50,7 @@ body{
 .logo_text {
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0);
   height: 100px;
   font-size: 11rem;
   overflow: hidden;
@@ -61,13 +61,18 @@ body{
   top: 0;
 }
 
+header{
+  position: sticky;
+  top: 1rem;
+  z-index: +1;
+}
+
 .top {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-
 a:hover {
   color: rgb(98, 92, 92);
 }
@@ -77,7 +82,7 @@ a:hover {
 } */
 
 :visited{
-  color: rgb(201, 198, 198);
+  color: rgb(238, 0, 0);
 }
 
 .writing {
@@ -176,7 +181,14 @@ main{
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
+  .logo_text {
+    font-size: 8rem;
+    height: 5rem;
+  }
+  .logo_complete_text{
+  font-size: 8rem;
+  }
   header section main footer {
       display: none;
   }
@@ -230,41 +242,41 @@ main{
 .logo_text2 {
   display: flex;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0);
   height: 100px;
   font-size: 9rem;
   overflow: hidden;
 }
+
 .boxex{
-  height: auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
-  gap: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-.boxex1{
+
+.boxex1, .boxex{
   display: flex;
   height: auto;
   width: auto;
-  display: flex;
   justify-content: center;
   gap: 10rem;
+  background-color: black;
+  z-index: -2;
 }
 
 
-.box1 {
+/* .box1 {
   height: 25rem;
   width: 25rem;
   border-radius: 1rem;
   border: 2px solid black;
-}
+  position:inherit;
+} */
 .description {
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  height: 11rem;
-  border-top: 1px solid black;
+  width: 24.8rem;
+  height: 10.9rem;
   border-radius: 0.9rem;
   background-color: rgb(46, 46, 46);
 }
@@ -272,14 +284,24 @@ main{
   color: whitesmoke;
   padding-left: 1rem;
 }
-.box2 {
+.image_project{
+  border-radius: 1rem;
+  height: 15rem;
+  width: 24.8rem;
+}
+
+.project_image{
+  padding: 0;
+}
+
+/* .box2 {
   border-radius: 1rem;
   border: 2px solid black;
   height: 25rem;
   width: 25rem;
   border-radius: 1rem;
-}
-.box3 {
+} */
+/* .box3 {
   border-radius: 1rem;
   border: 2px solid black;
   height: 25rem;
@@ -294,51 +316,123 @@ main{
   width: 25rem;
   border-radius: 1rem;
   text-shadow: 1rem;
-}
-.box1, .box2, .box3, .box4 {
+} */
+.box1, .box2, .box3, .box4, .box5 {
   /* display: flex;
   justify-content: center;
   align-items: end; */
+  z-index: 0
 }
 .link_project {
   display: flex;
   justify-content: center;
+  position: sticky;
+  bottom: 0;
+}
+.github1{
+  position: sticky;
+  bottom: 0;
 }
 
 .text{
   padding-right: 1rem;
 }
 
-@media screen and (max-width:550px){
+
+a{
+  text-decoration-line: none;
+}
+
+.imagenishant{
+  position:fixed;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.myproject_break, .myproject_break1{
+  background-color: black;
+}
+
+@media screen and (max-width:950px){
+  .logo_text2{
+    font-size: 8rem;
+    height: 5.5rem;
+  }
+  .description {
+    width: 15rem;
+    height: 10rem;
+  }
+  .image_project{
+    width: 15rem;
+    height:  12rem;
+  }
+  .boxex, .boxex1{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media screen and (max-width:650px){
   .logo_text2{
     font-size: 5rem;
     height: 3.5rem;
   }
-  .box1, .box2, .box3, .box4{
+  /* .box1, .box2, .box3, .box4, .box5{
     height: 10rem;
     width: 10rem;
-  }
+  } */
+
   .boxex, .boxex1{
-    padding-top: 4rem;
-    gap: 1rem;
+    padding-top: rem;
+    gap: 2rem;
   }
   .link_project{
     position: sticky;
     bottom: 0;
   }
+  .box1{
+    padding-top: 3rem ;
+  }
   .description {
-    width: 10rem;
-    height: 4rem;
-    border-top: 1px solid black;
-    border-radius: 0.9rem;
-    background-color: rgb(46, 46, 46);
+    width: 22rem;
+    height: 15rem;
   }
   .description_project{
-    font-size: 0.5rem;
+    font-size: 1rem;
+  }
+  .image_project{
+    height: 15rem;
+    width:  22rem;
+  }
+  .boxex{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    align-items: center;
+    padding-right: 1rem;
+  }
+  .box1,.box2{
+    padding-right: 0rem;
+  }
+  .boxex1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .myproject_break{
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .myproject_break1{
+    background-color: black;
+  }
+  .link_project{
+    position: sticky;
+    bottom: 0;
+  }
+  .box5{
+    padding-bottom: 2rem;
   }
   
-}
-
-a{
-  text-decoration-line: none;
 }
